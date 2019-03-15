@@ -50,6 +50,7 @@ class RecipesController < ProtectedController
                                    :instructions, :user_id)
     end
 
+    # Update only ingredients and instructions for a recipe.
     def update_recipe_params
       params.require(:recipe).permit(:ingredients, :instructions, :user_id)
     end
